@@ -6,5 +6,4 @@ const userController = require("../controllers/user.controller")
 
 router.get("/me", middleware, userController.getMe)
 
-
 module.exports = router;

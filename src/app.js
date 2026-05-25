@@ -4,12 +4,14 @@ const app = express();
 
 const authRoutes = require("./routes/auth.routes");
 const userRoutes = require("./routes/user.routes")
+const jobRoutes = require("./routes/job.routes")
 const port = 3000;
 
 app.use(express.json());
 
 app.use("/auth", authRoutes);
-app.use("/user", userRoutes);
+app.use("/users", userRoutes);
+app.use("/jobs", jobRoutes)
 
 app.listen(port, () => {
   console.log("App listening on port:", port);
