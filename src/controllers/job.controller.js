@@ -9,7 +9,8 @@ exports.getJobs = async (req, res) => {
         const id = req.user.userId
         const query = `SELECT job_id, user_id, company_name, position, status
         FROM jobs WHERE user_id = $1
-        LIMIT $2 OFFSET $3`
+        LIMIT $2 OFFSET $3
+        ORDER BY date_applied DESC`
         const values = [id, limit, offset]
         const result = await runQuery(query, values)
 
