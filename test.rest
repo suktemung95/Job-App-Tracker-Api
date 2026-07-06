@@ -5,3 +5,25 @@ Content-Type: application/json
     "username": "LWF",
     "password": "pass"
 }
+
+###
+GET http://localhost:3000/jobs/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiaWF0IjoxNzgzMzA0NzI3LCJleHAiOjE3ODMzMDgzMjd9.QAYCPUkqA8NV9S80hkva94_ZzIeX7NmXDzXsgguCngA
+
+###
+POST http://localhost:3000/jobs/40/reject
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiaWF0IjoxNzgzMzA0NzI3LCJleHAiOjE3ODMzMDgzMjd9.QAYCPUkqA8NV9S80hkva94_ZzIeX7NmXDzXsgguCngA
+
+###
+POST http://localhost:3000/jobs/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiaWF0IjoxNzgzMzA0NzI3LCJleHAiOjE3ODMzMDgzMjd9.QAYCPUkqA8NV9S80hkva94_ZzIeX7NmXDzXsgguCngA
+Content-Type: application/json
+
+{
+    "company_name": "Traackr", 
+    "position": "Software Engineering Intern (Part-Time, Internal Tooling)",
+    "location": "Hybrid New York",
+    "job_type": "Internship",
+    "status": "Applied",
+    "date_applied": "2026-07-05"
+}

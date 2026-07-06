@@ -7,5 +7,6 @@ const jobController = require("../controllers/job.controller")
 
 router.get("/", middleware, jobController.getJobs)
 router.post("/", middleware, jobController.postJob)
+router.post("/:jobId/reject", middleware, jobController.rejectJob)
 
 module.exports = router
